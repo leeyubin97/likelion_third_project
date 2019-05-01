@@ -1,0 +1,19 @@
+<head>
+    <title>홈페이지입니다</title>
+</head>
+
+<body>
+{% extends "myschedule/base.html" %}
+{% block content %}
+    <h1> 스케쥴표입니다</h1>
+
+    {% for schedule in schedules.all %}
+        <div>
+            <h2><a href="{% url 'detail' schedule.id %}">{{schedule.title}}</a></h2>
+            <p>{{schedule.memo}}</p>
+            <p>{{schedule.schedule_date}}</p>
+            <p>{{schedule.published_date}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}    
+</body>

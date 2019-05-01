@@ -1,0 +1,14 @@
+<head>
+    <title>뉴페이지</title>
+</head>
+<body>
+{% extends "myschedule/base.html"%}
+{% block content %}
+    <h1>글쓰기 페이지입니다</h1>
+    <form method = "POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type = "summit">저장입니다</button>
+    </form>
+{% endblock %}
+</body>

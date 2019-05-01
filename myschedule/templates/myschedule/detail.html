@@ -1,0 +1,20 @@
+<head>
+    <title>디테일 페이지</title>
+</head>
+
+<body>
+{% extends "myschedule/base.html" %}
+{% block content %}
+
+    <h1>디테일한 스케쥴내용입니다</h1>
+    <div>
+        <h2>{{schedule.title}}</h2>
+        <p>{{schedule.memo}}</p>
+        <p>{{schedule.schedule_date}}</p>
+        <p>{{schedule.published_date}}</p>
+        
+        <a href = "{% url 'edit' schedule.id %}">수정입니다</a>
+        <a href = "{% url 'delete' schedule.id %}">삭제입니다</a>
+    </div>
+{% endblock %}
+</body>

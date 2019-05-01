@@ -1,0 +1,16 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+<body>
+    <h1><em>안녕하세요 유빈의 스케쥴표입니다!</em></h1>
+    <img src={% static 'img/drawingofme.jpg'%} height="300px"alt=""
+    
+    <div>
+        <a href = "{% url 'new' %}">누르면 새 글</a>
+        <a href = "{% url 'home' %}">홈으로 가세요</a>
+    </div>
+    {% block content%}
+    {% endblock %}
+</body>
